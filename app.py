@@ -1,10 +1,16 @@
+import os
 from flask import Flask
 
-app = Flask(__name__)
+# from .config import Config
+from .db import db
+from .api.health import health_bp
 
 
-@app.route("/")
-def hi():
-    return {
-        "yooo": "nyurururur nega what's good",
-    }
+def create_app() -> Flask:
+    app = Flask(__name__)
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
+
+    db.init_app(app)
+
+    app.register_blueprint(health_bp)
+    return app
