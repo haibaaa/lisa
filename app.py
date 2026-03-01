@@ -1,6 +1,6 @@
 from flask import Flask
 
-from api.client import client_bp
+from api import client, create
 from config import Config
 from db import db
 
@@ -10,5 +10,6 @@ def create_app() -> Flask:
     app.config.from_object(Config)
 
     db.init_app(app)
-    app.register_blueprint(client_bp)
+    app.register_blueprint(client.client_bp)
+    app.register_blueprint(create.create_bp)
     return app
