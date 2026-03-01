@@ -1,9 +1,8 @@
-import os
 from flask import Flask
 
-from .config import Config
-from .db import db
-from .api.health import health_bp
+from config import Config
+from db import db
+from api.health import health_bp
 
 
 def create_app() -> Flask:
