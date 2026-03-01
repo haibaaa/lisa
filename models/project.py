@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
-from ..db import db
+from db import db
 
 """
 schema for project
@@ -18,15 +18,16 @@ class Project(db.Model):
 
     id: Mapped[uuid.UUID] = mapped_column(
         primary_key=True,
-        default=uuid.uuid5,
+        default=uuid.uuid4,
     )
 
     name: Mapped[str] = mapped_column(
         String(255),
+        unique=True,
         nullable=False,
     )
 
-    api_identifier: Mapped[str] = mapped_column(
+    client_api: Mapped[str] = mapped_column(
         String(64),
         unique=True,
         nullable=False,
