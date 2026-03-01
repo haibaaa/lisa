@@ -12,10 +12,10 @@
 ## phase 1 — database connectivity (no features yet)
 **goal:** prove the backend can talk to neon via sqlalchemy.
 
-- [ ] add sqlalchemy engine using `database_url`
-- [ ] verify connection on app startup
-- [ ] create a minimal health endpoint that queries the db
-- [ ] handle db connection failure gracefully
+- [x] add sqlalchemy engine using `database_url`
+- [x] verify connection on app startup
+- [x] create a minimal health endpoint that queries the db
+- [x] handle db connection failure gracefully
 
 *deliverable:* app starts and confirms db connectivity.
 
