@@ -16,11 +16,22 @@ create a project and return client and write keys
 
 @create_bp.route("/project", methods=["POST"])
 def create_project_handler():
-    # add validation later --> error out on existing fields
+    # add validation later --> error out on missing fields
     params = request.get_json()
+    if not params or "name" not in params:
+        return (
+            jsonify(
+                {
+                    "error": "expected project name",
+                }
+            ),
+            400,
+        )
+
     project = Project(
         name=params["name"],
         client_api=secrets.token_urlsafe(16),
+        # in future --> hash the write key
         write_api=secrets.token_urlsafe(16),
     )
     db.session.add(project)
