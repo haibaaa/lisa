@@ -9,7 +9,7 @@ It allows applications to dynamically change behavior at runtime without redeplo
 curl -X POST https://lisa-aopa.onrender.com/create/<project_name>
 ````
 
-> [!CAUTION] Response (shown once):
+> [!NOTE] Response (shown once):
 
 ```json
 {
