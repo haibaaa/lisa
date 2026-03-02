@@ -1,4 +1,7 @@
 from flask import Flask
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from api import client, create, sync
 from config import Config

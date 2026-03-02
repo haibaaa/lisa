@@ -1,6 +1,5 @@
 # scripts/seed_db.py
 from dotenv import load_dotenv
-import secrets
 from flask import Flask
 
 load_dotenv()

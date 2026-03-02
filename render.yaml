@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lisa
+    runtime: python
+    buildCommand: pip install uv && uv sync
+    startCommand: uv run gunicorn app
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: FLASK_ENV
+        value: production

@@ -21,7 +21,7 @@ create_bp: Blueprint = Blueprint(
 )
 
 
-@create_bp.route("/<string:name>")
+@create_bp.route("/<string:name>", methods=["POST"])
 def create_project_handler(name):
     project = Project(
         name=name,
