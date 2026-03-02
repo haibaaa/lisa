@@ -8,7 +8,7 @@ It allows applications to dynamically change behavior at runtime without redeplo
 ## Useful Links
 
 - **Mona CLI on PyPI**  
-  The command-line tool used to sync local configuration with the Lisa backend — available on PyPI:  
+  The command-line tool i created to sync local configuration with the Lisa backend — available on PyPI:  
   https://pypi.org/project/mona-cli/
 
 - **Example Application Repository**  
