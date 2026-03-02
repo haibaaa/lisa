@@ -4,6 +4,20 @@ Lisa is a small remote configuration and feature flag service inspired by system
 
 It allows applications to dynamically change behavior at runtime without redeploying code, while maintaining strict boundaries between public read access and privileged write access.
 
+## Create a Lisa project
+```bash
+curl -X POST https://lisa-aopa.onrender.com/create/<project_name>
+````
+
+> [!CAUTION] Response (shown once):
+
+```json
+{
+  "client_api": "public-client-key",
+  "config_api": "private-config-key"
+}
+```
+
 ---
 ## Useful Links
 
@@ -208,12 +222,3 @@ These features are omitted to keep the system understandable and focused on its 
 
 The current structure allows these to be added without breaking existing clients.
 
----
-
-## Final Note
-
-Lisa is intentionally small.
-
-The goal is not to replicate Firebase, but to demonstrate how a well-structured system enforces correctness through design rather than convention.
-
-```
