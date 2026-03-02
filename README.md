@@ -5,6 +5,16 @@ Lisa is a small remote configuration and feature flag service inspired by system
 It allows applications to dynamically change behavior at runtime without redeploying code, while maintaining strict boundaries between public read access and privileged write access.
 
 ---
+## Useful Links
+
+- **Mona CLI on PyPI**  
+  The command-line tool used to sync local configuration with the Lisa backend — available on PyPI:  
+  https://pypi.org/project/mona-cli/
+
+- **Example Application Repository**  
+  An example of Lisa with Python app using Mona and a Vite + React frontend: 
+  https://github.com/haibaaa/lisa-demo.git
+---
 
 ## Problem Statement
 
