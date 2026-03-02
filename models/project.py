@@ -1,3 +1,4 @@
+# models/project.py
 import uuid
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
@@ -28,9 +29,10 @@ class Project(db.Model):
         index=True,
     )
 
+    # name uniqueness is redundant because of write apis
     name: Mapped[str] = mapped_column(
         String(255),
-        unique=True,
+        # unique=True,
         nullable=False,
     )
 

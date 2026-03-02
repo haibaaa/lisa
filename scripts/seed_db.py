@@ -21,9 +21,11 @@ def seed():
             return
 
         # later add checks if generated string has conflicts
+        # ignore lsp errors on parameters
         project = Project(
-            name="stub project",
+            name="stub_project",
             client_api=secrets.token_urlsafe(16),
+            write_api=secrets.token_urlsafe(16),
         )
         db.session.add(project)
         db.session.flush()  # get project.id before committing
