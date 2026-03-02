@@ -201,17 +201,6 @@ All AI-generated code was manually reviewed and adapted to preserve system invar
 
 ---
 
-## Out of Scope (By Design)
-
-* user authentication
-* per-user targeting
-* real-time push updates
-* secrets management
-* role-based access control
-
-These features are omitted to keep the system understandable and focused on its core guarantees.
-
----
 
 ## Possible Extensions
 
