@@ -1,6 +1,6 @@
 from flask import Flask
 
-from api import client, create
+from api import client, create, sync
 from config import Config
 from db import db
 
@@ -12,4 +12,5 @@ def create_app() -> Flask:
     db.init_app(app)
     app.register_blueprint(client.client_bp)
     app.register_blueprint(create.create_bp)
+    app.register_blueprint(sync.sync_bp)
     return app

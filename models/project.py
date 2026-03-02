@@ -22,7 +22,7 @@ class Project(db.Model):
         index=True,
     )
 
-    write_api: Mapped[str] = mapped_column(
+    config_api: Mapped[str] = mapped_column(
         String(64),
         unique=True,
         nullable=False,
