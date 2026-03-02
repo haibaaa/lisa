@@ -1,7 +1,4 @@
 from flask import Flask
-from dotenv import load_dotenv
-
-load_dotenv()
 
 from api import client, create, sync
 from config import Config
@@ -17,3 +14,6 @@ def create_app() -> Flask:
     app.register_blueprint(create.create_bp)
     app.register_blueprint(sync.sync_bp)
     return app
+
+
+app: Flask = create_app()
