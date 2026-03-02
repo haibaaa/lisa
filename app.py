@@ -1,8 +1,10 @@
+from pydoc import importfile
 from flask import Flask
 
 from api import client, create, sync
 from config import Config
 from db import db
+from flask_cors import CORS
 
 
 def create_app() -> Flask:
@@ -17,3 +19,4 @@ def create_app() -> Flask:
 
 
 app: Flask = create_app()
+CORS(app)
